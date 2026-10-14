@@ -19,3 +19,18 @@ Open `profile.html` in any web browser. No setup needed.
 4. All sections are visible and spaced apart; the Connect aside looks distinct.
 5. The footer copyright line is centered.
 6. With images disabled, the image `alt` text appears in its place.
+
+
+## Screenshots
+
+Full profile page:
+
+![Full profile page screenshot](images/screenshot.png)
+
+Browser view showing the page title "My Profile" in the tab:
+
+![Browser tab showing the page title](images/browser-tab.png)
+
+## Note
+
+This is an ongoing learning project and will be updated as I progress.
