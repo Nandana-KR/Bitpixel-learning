@@ -23,13 +23,11 @@ Open `profile.html` in any web browser. No setup needed.
 
 ## Screenshots
 
-Full profile page:
+Screenshots of the page are available in the `images` folder:
 
-![Full profile page screenshot](images/screenshot.png)
+- `images/screenshot.png` - full profile page
+- `images/browser-tab.png` - browser view showing the page title "My Profile"
 
-Browser view showing the page title "My Profile" in the tab:
-
-![Browser tab showing the page title](images/browser-tab.png)
 
 ## Note
 
