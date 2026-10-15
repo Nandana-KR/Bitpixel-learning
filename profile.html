@@ -19,7 +19,8 @@
 
   </header>
 
-  <nav>
+  <nav aria-label="Main navigation">
+
 
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -31,10 +32,16 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        This page is about me.
-        It describes my work.
+        I am Nandana Ravindran, a developer at BitPixel Solution with an interest
+        in building clean, accessible web experiences. I enjoy turning ideas into
+        simple, usable interfaces.
+      </p>
+      <p>
+        I am currently focused on front-end fundamentals, writing semantic HTML
+        and understanding how good structure improves accessibility.
       </p>
     </section>
+
 
 
     <section id="projects">
@@ -42,31 +49,78 @@
 
       <article>
         <h3>Expense Tracker</h3>
-        <p>A web application for tracking and managing expense.</p>
+        <p>
+          A web application for tracking and managing daily expenses. It lets users
+          add, categorize, and review spending to understand their habits.
+        </p>
       </article>
 
+      <article>
+        <h3>Smart Glove</h3>
+        <p>
+          A device that helps specially-abled people communicate by translating
+          hand gestures into text or speech.
+        </p>
+      </article>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
-      <p>
-        My technical skill set includes python,Javascript,
-        HTML,CSS,Sitecore XM.
-
-      </p>
+      <ul>
+        <li>python</li>
+        <li>javascript</li>
+        <li>HTML</li>
+        <li>css</li>
+        <li>sitecore xm</li>
+      </ul>
     </section>
 
     <section id="contacts">
       <h2>Contacts</h2>
       <p>
-        You can reach me out through Email:nandana@2003.
+        You can reach me at
+        <a href="mailto:nandana555ravi@gmail.com">nandana555ravi@gmail.com</a>
       </p>
+      <p>
+        You can find my professional updates on
+        <a href="https://www.linkedin.com">linkedin</a>
+      </p>
+      <h3>Send Me a Message</h3>
+      <form>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" pattern="[A-Za-z ]+" title="Please use letters and space only"
+            required>
+
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" minlength="10" maxlength="500" required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+
+      </form>
+
+
     </section>
 
     <aside>
-      <h2>Connect With Me</h2>
-      <p>You can find my professional updates on LinkedIn.</p>
+      <!--<h2>Currently Learning</h2>-->
+      <p>Currently Learning:Semantic HTML, accessibility, and CSS fundamentals as part of my front-end journey.</p>
     </aside>
+
+
+
   </main>
   <footer>
     <p>&copy; 2026 Nandana Ravindran. All rights reserved.</p>
