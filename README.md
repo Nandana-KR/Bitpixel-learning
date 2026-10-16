@@ -76,6 +76,21 @@ Screenshot of the contact form is available in the `images` folder:
 - `images/Screenshot_Day_2.jpeg` - contact form with validation
 
 
+
+## Day 3 - Git Workflow
+
+Practiced the team Git workflow: feature branches, commits, pull requests, and
+interactive rebase.
+
+### What I did
+- Created a feature branch `feature/contact-form` following the `feature/`
+  naming convention.
+- Committed the Day 1-2 work on the branch and pushed it to GitHub.
+- Opened a pull request with a summary, how-to-test steps, and a screenshot.
+- Practiced interactive rebase to squash several small commits into one clean
+  commit, then updated the branch with a safe force-push.
+
+
 ## Day 4 - CSS Fundamentals (Style Decisions)
 
 Added a styling foundation in a new file `styles/main.css`, covering the box
