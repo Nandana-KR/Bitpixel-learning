@@ -114,3 +114,7 @@ model, a CSS reset, and a responsive container pattern.
 2. Resize the browser window narrow and wide. Content shrinks and grows with no
    horizontal scrollbar and no layout jumping.
 3. The header (light) and footer (dark navy) are clearly distinct.
+
+### Day 4 Screenshot
+
+- `images/Screenshot_Day_4.jpeg` - Day 4 layout with reset, container, and styled header/footer
