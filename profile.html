@@ -7,19 +7,24 @@
   <title>My Profile</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="styles/basic.css">
+  <link rel="stylesheet" href="styles/main.css">
+
 </head>
 
 <body>
   <header>
-    <img src="images/nandana.jpg" alt="profile pic of Nandana">
-    <div>
-      <h1>Nandana Ravindran</h1>
-      <p>Developer | BitPixel Solution</p>
+    <div class="container header-inner">
+      <img src="images/nandana.jpg" alt="Profile Pic of Nandana">
+      <div>
+        <h1>Nandana Ravindran</h1>
+        <p>Developer | BitPixel Solution</p>
+      </div>
     </div>
+
 
   </header>
 
-  <nav aria-label="Main navigation">
+  <nav class="container" aria-label="Main navigation">
 
 
     <a href="#about">About</a>
@@ -28,8 +33,9 @@
     <a href="#contacts">Contacts</a>
   </nav>
 
-  <main>
-    <section id="about">
+  <main class="container">
+
+    <section class="card" id="about">
       <h2>About Me</h2>
       <p>
         I am Nandana Ravindran, a developer at BitPixel Solution with an interest
@@ -44,7 +50,7 @@
 
 
 
-    <section id="projects">
+    <section class="card" id="projects">
       <h2>My Projects</h2>
 
       <article>
@@ -64,18 +70,18 @@
       </article>
     </section>
 
-    <section id="skills">
+    <section class="card" id="skills">
       <h2>Skills</h2>
       <ul>
-        <li>python</li>
-        <li>javascript</li>
+        <li>Python</li>
+        <li>Javascript</li>
         <li>HTML</li>
-        <li>css</li>
-        <li>sitecore xm</li>
+        <li>Css</li>
+        <li>Sitecore XM</li>
       </ul>
     </section>
 
-    <section id="contacts">
+    <section class="card" id="contacts">
       <h2>Contacts</h2>
       <p>
         You can reach me at
@@ -83,7 +89,7 @@
       </p>
       <p>
         You can find my professional updates on
-        <a href="https://www.linkedin.com">linkedin</a>
+        <a href="https://www.linkedin.com">Linkedin</a>
       </p>
       <h3>Send Me a Message</h3>
       <form>
@@ -123,7 +129,9 @@
 
   </main>
   <footer>
-    <p>&copy; 2026 Nandana Ravindran. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2026 Nandana Ravindran. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 
