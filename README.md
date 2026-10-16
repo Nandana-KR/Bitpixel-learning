@@ -74,3 +74,43 @@ validation:
 Screenshot of the contact form is available in the `images` folder:
 
 - `images/Screenshot_Day_2.jpeg` - contact form with validation
+
+
+## Day 4 - CSS Fundamentals (Style Decisions)
+
+Added a styling foundation in a new file `styles/main.css`, covering the box
+model, a CSS reset, and a responsive container pattern.
+
+### Reset
+- `* { margin: 0; padding: 0; box-sizing: border-box; }` removes inconsistent
+  browser default spacing so every browser starts from the same clean base.
+- `box-sizing: border-box` keeps padding and borders inside an element's set
+  width, so boxes do not grow unexpectedly.
+
+### Container
+- A reusable `.container` class (`max-width: 960px; margin: 0 auto;
+  padding: 0 20px;`) centers content in a readable column.
+- `max-width` caps the width on large screens and lets content shrink on small
+  screens, so there is no horizontal scroll or layout shift on resize.
+
+### Header and footer
+- Header and footer use full-width background colors, while their content sits
+  inside `.container` so it aligns with the main content.
+- The header uses a light background; the footer uses a dark navy background
+  with white text, making the two visually distinct.
+- The header content (photo and name) is laid out in a row using Flexbox
+  (`.header-inner`).
+
+### Navigation
+- The nav links are centered using `display: flex` with `justify-content:
+  center`, and spaced using `gap`.
+
+### Files
+- `styles/basic.css` - element styles from Days 1-3.
+- `styles/main.css` - Day 4 reset, container, and layout foundation.
+
+### How to Test
+1. Open `profile.html`. The content sits in a centered column.
+2. Resize the browser window narrow and wide. Content shrinks and grows with no
+   horizontal scrollbar and no layout jumping.
+3. The header (light) and footer (dark navy) are clearly distinct.
