@@ -13,7 +13,8 @@
 
 <body>
   <header>
-    <div class="container header-inner">
+    <div class="container profile-card">
+
       <img src="images/nandana.jpg" alt="Profile Pic of Nandana">
       <div>
         <h1>Nandana Ravindran</h1>
@@ -34,99 +35,111 @@
   </nav>
 
   <main class="container">
-
-    <section class="card" id="about">
-      <h2>About Me</h2>
-      <p>
-        I am Nandana Ravindran, a developer at BitPixel Solution with an interest
-        in building clean, accessible web experiences. I enjoy turning ideas into
-        simple, usable interfaces.
-      </p>
-      <p>
-        I am currently focused on front-end fundamentals, writing semantic HTML
-        and understanding how good structure improves accessibility.
-      </p>
-    </section>
+    <div class="layout">
+      <aside class="sidebar">
 
 
+        <h3>Currently Learning</h3>
+        <p>Semantic HTML, accessibility, and CSS fundamentals as part of my front-end journey.</p>
 
-    <section class="card" id="projects">
-      <h2>My Projects</h2>
+        <h3>Interests</h3>
+        <ul>
+          <li>Clean, accessible user interfaces</li>
+          <li>Front-end performance</li>
+          <li>Continuous learning</li>
+        </ul>
 
-      <article>
-        <h3>Expense Tracker</h3>
-        <p>
-          A web application for tracking and managing daily expenses. It lets users
-          add, categorize, and review spending to understand their habits.
-        </p>
-      </article>
+        <h3>Find Me</h3>
+        <ul>
+          <li><a href="https://github.com/Nandana-KR">GitHub</a></li>
+          <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        </ul>
+      </aside>
 
-      <article>
-        <h3>Smart Glove</h3>
-        <p>
-          A device that helps specially-abled people communicate by translating
-          hand gestures into text or speech.
-        </p>
-      </article>
-    </section>
-
-    <section class="card" id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Python</li>
-        <li>Javascript</li>
-        <li>HTML</li>
-        <li>Css</li>
-        <li>Sitecore XM</li>
-      </ul>
-    </section>
-
-    <section class="card" id="contacts">
-      <h2>Contacts</h2>
-      <p>
-        You can reach me at
-        <a href="mailto:nandana555ravi@gmail.com">nandana555ravi@gmail.com</a>
-      </p>
-      <p>
-        You can find my professional updates on
-        <a href="https://www.linkedin.com">Linkedin</a>
-      </p>
-      <h3>Send Me a Message</h3>
-      <form>
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" pattern="[A-Za-z ]+" title="Please use letters and space only"
-            required>
-
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-
-        <div>
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required>
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" minlength="10" maxlength="500" required></textarea>
-        </div>
-
-        <button type="submit">Send Message</button>
-
-      </form>
-
-
-    </section>
-
-    <aside>
-      <!--<h2>Currently Learning</h2>-->
-      <p>Currently Learning:Semantic HTML, accessibility, and CSS fundamentals as part of my front-end journey.</p>
-    </aside>
+      <div class="content">
+        <section class="card" id="about">
+          <h2>About Me</h2>
+          <p>
+            I am Nandana Ravindran, a developer at BitPixel Solution with an interest
+            in building clean, accessible web experiences. I enjoy turning ideas into
+            simple, usable interfaces.
+          </p>
+          <p>
+            I am currently focused on front-end fundamentals, writing semantic HTML
+            and understanding how good structure improves accessibility.
+          </p>
+        </section>
 
 
 
+        <section class="card" id="projects">
+          <h2>My Projects</h2>
+
+          <article>
+            <h3>Expense Tracker</h3>
+            <p>
+              A web application for tracking and managing daily expenses. It lets users
+              add, categorize, and review spending to understand their habits.
+            </p>
+          </article>
+
+          <article>
+            <h3>Smart Glove</h3>
+            <p>
+              A device that helps specially-abled people communicate by translating
+              hand gestures into text or speech.
+            </p>
+          </article>
+        </section>
+
+        <section class="card" id="skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>Python</li>
+            <li>Javascript</li>
+            <li>HTML</li>
+            <li>Css</li>
+            <li>Sitecore XM</li>
+          </ul>
+        </section>
+
+        <section class="card" id="contacts">
+          <h2>Contacts</h2>
+          <p>
+            You can reach me at
+            <a href="mailto:nandana555ravi@gmail.com">nandana555ravi@gmail.com</a>
+          </p>
+          <h3>Send Me a Message</h3>
+          <form>
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" pattern="[A-Za-z ]+" title="Please use letters and space only"
+                required>
+
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" minlength="10" maxlength="500" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+
+          </form>
+
+        </section>
+
+      </div>
+
+    </div>
   </main>
   <footer>
     <div class="container">

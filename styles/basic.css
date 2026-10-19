@@ -85,14 +85,6 @@ ul {
   line-height: 1.8;
 }
 
-aside {
-  background-color: rgba(90, 88, 88, 0.6);
-  font-style: italic;
-  font-size: 0.9rem;
-  text-align: center;
-  border-radius: 12px;
-}
-
 footer {
   background-color: #1e3a5f;
   color: #ffffff;
@@ -150,4 +142,27 @@ textarea:user-invalid {
 input:valid,
 textarea:valid {
   border: 2px solid #16a34a;
+}
+
+.sidebar {
+  background-color: #cbd5e1;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.sidebar h3 {
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.sidebar p {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  margin-bottom: 10px;
+  padding-left: 18px;
 }
