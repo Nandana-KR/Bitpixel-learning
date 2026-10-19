@@ -133,3 +133,17 @@ model, a CSS reset, and a responsive container pattern.
 ### Day 4 Screenshot
 
 - `images/Screenshot_Day_4.jpeg` - Day 4 layout with reset, container, and styled header/footer
+
+
+## Day 5 - Flexbox Layout
+
+Built a responsive two-column layout using Flexbox.
+
+- Two columns: sidebar (`aside`) + main content, via `.layout { display: flex }`.
+- Content uses `flex: 1` (fills space); sidebar uses `flex: 0 0 250px` (fixed width).
+- `order` places the sidebar on the left while keeping content first in the HTML.
+- `@media (max-width: 768px)` stacks the columns vertically on small screens.
+
+Screenshots:
+- `images/Screenshot_Day_5_wide.jpeg` - two columns (wide screen)
+- `images/Screenshot_Day_5_narrow.jpeg` - stacked (small screen)
