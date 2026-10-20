@@ -147,3 +147,30 @@ Built a responsive two-column layout using Flexbox.
 Screenshots:
 - `images/Screenshot_Day_5_wide.jpeg` - two columns (wide screen)
 - `images/Screenshot_Day_5_narrow.jpeg` - stacked (small screen)
+
+
+## Day 6 - CSS Grid Portfolio
+
+Built a responsive portfolio card grid in `portfolio.html` (styles in
+`styles/portfolio.css`).
+
+- Grid uses `repeat(auto-fit, minmax(250px, 1fr))`, so cards reflow from
+  4 columns down to 1 on mobile with no media queries.
+- Each card has an image, title, description, and a "View Project" button.
+
+
+
+## Image Optimization
+
+- Card image files are kept small (under 20 KB each) for fast loading.
+- `object-fit: contain` sizes images cleanly inside each card without stretching.
+- Images are served close to their displayed size, avoiding large downloads.
+- Lazy loading (`loading="lazy"`) is another key technique: it defers off-screen
+  images until the user scrolls to them, useful on image-heavy pages.
+- Larger images would be compressed with a tool like TinyPNG or Squoosh.
+
+
+### Day 6 Screenshot
+- `images/Screenshot_Day_6.jpeg` - responsive portfolio grid
+
+
