@@ -7,19 +7,26 @@
   <title>My Profile</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="styles/basic.css">
+  <link rel="stylesheet" href="styles/main.css">
+
 </head>
 
 <body>
   <header>
-    <img src="images/nandana.jpg" alt="profile pic of Nandana">
-    <div>
-      <h1>Nandana Ravindran</h1>
-      <p>Developer | BitPixel Solution</p>
+    <div class="container profile-card">
+
+      <img src="images/nandana.jpg" alt="Profile Pic of Nandana">
+      <div>
+        <h1>Nandana Ravindran</h1>
+        <p>Developer | BitPixel Solution</p>
+      </div>
     </div>
+
 
   </header>
 
-  <nav>
+  <nav class="container" aria-label="Main navigation">
+
 
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -27,49 +34,117 @@
     <a href="#contacts">Contacts</a>
   </nav>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        This page is about me.
-        It describes my work.
-      </p>
-    </section>
+  <main class="container">
+    <div class="layout">
+      <aside class="sidebar">
 
 
-    <section id="projects">
-      <h2>My Projects</h2>
+        <h3>Currently Learning</h3>
+        <p>Semantic HTML, accessibility, and CSS fundamentals as part of my front-end journey.</p>
 
-      <article>
-        <h3>Expense Tracker</h3>
-        <p>A web application for tracking and managing expense.</p>
-      </article>
+        <h3>Interests</h3>
+        <ul>
+          <li>Clean, accessible user interfaces</li>
+          <li>Front-end performance</li>
+          <li>Continuous learning</li>
+        </ul>
 
-    </section>
+        <h3>Find Me</h3>
+        <ul>
+          <li><a href="https://github.com/Nandana-KR">GitHub</a></li>
+          <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        </ul>
+      </aside>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <p>
-        My technical skill set includes python,Javascript,
-        HTML,CSS,Sitecore XM.
+      <div class="content">
+        <section class="card" id="about">
+          <h2>About Me</h2>
+          <p>
+            I am Nandana Ravindran, a developer at BitPixel Solution with an interest
+            in building clean, accessible web experiences. I enjoy turning ideas into
+            simple, usable interfaces.
+          </p>
+          <p>
+            I am currently focused on front-end fundamentals, writing semantic HTML
+            and understanding how good structure improves accessibility.
+          </p>
+        </section>
 
-      </p>
-    </section>
 
-    <section id="contacts">
-      <h2>Contacts</h2>
-      <p>
-        You can reach me out through Email:nandana@2003.
-      </p>
-    </section>
 
-    <aside>
-      <h2>Connect With Me</h2>
-      <p>You can find my professional updates on LinkedIn.</p>
-    </aside>
+        <section class="card" id="projects">
+          <h2>My Projects</h2>
+
+          <article>
+            <h3>Expense Tracker</h3>
+            <p>
+              A web application for tracking and managing daily expenses. It lets users
+              add, categorize, and review spending to understand their habits.
+            </p>
+          </article>
+
+          <article>
+            <h3>Smart Glove</h3>
+            <p>
+              A device that helps specially-abled people communicate by translating
+              hand gestures into text or speech.
+            </p>
+          </article>
+        </section>
+
+        <section class="card" id="skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>Python</li>
+            <li>Javascript</li>
+            <li>HTML</li>
+            <li>Css</li>
+            <li>Sitecore XM</li>
+          </ul>
+        </section>
+
+        <section class="card" id="contacts">
+          <h2>Contacts</h2>
+          <p>
+            You can reach me at
+            <a href="mailto:nandana555ravi@gmail.com">nandana555ravi@gmail.com</a>
+          </p>
+          <h3>Send Me a Message</h3>
+          <form>
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" pattern="[A-Za-z ]+" title="Please use letters and space only"
+                required>
+
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" minlength="10" maxlength="500" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+
+          </form>
+
+        </section>
+
+      </div>
+
+    </div>
   </main>
   <footer>
-    <p>&copy; 2026 Nandana Ravindran. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2026 Nandana Ravindran. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 
