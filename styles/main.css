@@ -15,6 +15,17 @@
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header img {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
 
 
 
@@ -47,6 +58,7 @@ nav.container {
   padding: 8px;
   background-color: #dcdedf;
   justify-content: center;
+  flex-wrap: wrap;
 
 }
 
@@ -74,4 +86,6 @@ nav.container {
   .sidebar {
     flex: 1;
   }
+
+
 }
