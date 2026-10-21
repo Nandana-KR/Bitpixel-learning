@@ -173,4 +173,37 @@ Built a responsive portfolio card grid in `portfolio.html` (styles in
 ### Day 6 Screenshot
 - `images/Screenshot_Day_6.jpeg` - responsive portfolio grid
 
+## Day 7 - Deployment (GitHub Pages)
+
+The site is deployed with GitHub Pages and is live at:
+
+**Live URL:** https://nandana-kr.github.io/Bitpixel-learning/
+
+`profile.html` was renamed to `index.html` so it loads automatically as the
+home page. Social preview (Open Graph) meta tags were added to `index.html`
+so shared links show a title, description, and image.
+
+### Deployment steps
+1. Push the site files to the `main` branch on GitHub.
+2. In the repository, go to Settings > Pages.
+3. Under "Build and deployment", set Source to "Deploy from a branch".
+4. Choose branch `main` and folder `/ (root)`, then Save.
+5. Wait 1-2 minutes. GitHub builds and publishes the site at the live URL.
+6. Any future push to `main` automatically redeploys the site.
+
+### Rollback steps
+If a change breaks the live site, roll back to a previous working version:
+1. Find the last good commit: `git log --oneline`.
+2. Revert the bad commit: `git revert <commit-hash>` (creates a new commit that
+   undoes the change, keeping history intact).
+3. Push to `main`: `git push origin main`.
+4. GitHub Pages automatically redeploys the previous working version in 1-2 min.
+
+Alternatively, revert the merge of a bad pull request on GitHub using the
+"Revert" button on the merged PR.
+
+### How to test
+1. Open the live URL. The profile page loads as the home page.
+2. Click "Portfolio" to open the portfolio page; click "Home" to return.
+3. Resize the window and check the mobile view - layouts stay readable.
 
