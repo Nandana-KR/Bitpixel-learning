@@ -1,7 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f4f4;
-  color: #333333;
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   margin: 0;
   line-height: 1.6;
 }
@@ -12,7 +12,17 @@ header {
 
   padding: 24px 0;
 
-  background-color: #acc0d8;
+  background-color: var(--color-header);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+header a:hover {
+  text-decoration: underline;
 }
 
 header h1 {
@@ -21,7 +31,7 @@ header h1 {
 
 header p {
   margin: 0;
-  color: #475569;
+  color: var(--color-text);
 }
 
 
@@ -34,14 +44,14 @@ header img {
 
 }
 
+a {
+  color: var(--color-primary);
+}
 
 nav a {
-  color: #1d4ed8;
-  /*margin-right: 30px;*/
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
-  /*margin-left: 10px;
-  margin-right: 10px;*/
   transition: background-color 0.2s, color 0.2s;
 
 
@@ -49,7 +59,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-  background-color: #1d4ed8;
+  background-color: var(--color-primary);
   color: #ffffff;
 }
 
@@ -70,7 +80,7 @@ p {
 h1,
 h2,
 h3 {
-  color: #1e3a5f;
+  color: var(--color-heading);
 
 }
 
@@ -86,7 +96,7 @@ ul {
 }
 
 footer {
-  background-color: #1e3a5f;
+  background-color: var(--color-primary-dark);
   color: #ffffff;
   text-align: center;
   padding: 24px 0;
@@ -121,8 +131,8 @@ textarea {
 
 
 button {
-  background-color: #1d4ed8;
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
@@ -131,7 +141,9 @@ button {
 }
 
 button:hover {
-  background-color: #1e3a5f;
+  background-color: var(--color-primary-dark);
+
+
 }
 
 input:user-invalid,
@@ -145,8 +157,8 @@ textarea:valid {
 }
 
 .sidebar {
-  background-color: #cbd5e1;
-  border: 1px solid #cbd5e1;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-surface);
   border-radius: 12px;
   padding: 20px;
   font-size: 0.9rem;

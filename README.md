@@ -207,3 +207,30 @@ Alternatively, revert the merge of a bad pull request on GitHub using the
 2. Click "Portfolio" to open the portfolio page; click "Home" to return.
 3. Resize the window and check the mobile view - layouts stay readable.
 
+
+## Day 8 - Design System and Theme Toggle
+
+Added a small design system using CSS variables (design tokens) and a
+light/dark theme toggle that persists the user's choice.
+
+### Tokens
+- Defined tokens in `styles/token.css` for colors, spacing, and typography.
+- Tokens are declared on `:root` so they are available globally.
+- Components (header, cards, buttons, footer, sidebar) use `var(--token)`
+  instead of hardcoded values, so the design is consistent and easy to change.
+
+### Theme toggle
+
+- Tokens for colors, spacing, and typography are defined in `styles/token.css`
+  on `:root`, and used across the header, cards, buttons, and footer.
+- A `.dark` block overrides the token values, so one class re-themes the whole
+  site.
+- `theme.js` toggles the `dark` class on click and saves the choice in
+  `localStorage`, so the theme persists across reloads and pages.
+
+### How to test
+1. Click the theme toggle - the page switches light/dark.
+2. Reload - the chosen theme stays.
+
+### Day 8 Screenshot
+- `images/Screenshot_Day_8.jpeg` - the site in dark mode

@@ -13,6 +13,7 @@
 .profile-card {
   display: flex;
   align-items: center;
+
 }
 
 @media (max-width: 768px) {
@@ -35,8 +36,8 @@ main.container {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 16px 20px;
+  background-color: var(--color-surface);
+  padding: var(--space-md) var(--space-lg);
   margin-bottom: 20px;
   border-radius: 12px;
   border: 1px solid #5384ce;
