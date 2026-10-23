@@ -234,3 +234,23 @@ light/dark theme toggle that persists the user's choice.
 
 ### Day 8 Screenshot
 - `images/Screenshot_Day_8.jpeg` - the site in dark mode
+
+## Day 9 - Sass and BEM
+
+Introduced Sass and the BEM naming convention for more scalable styles.
+
+- Converted the portfolio styles into Sass partials in `styles/scss/`:
+  `_variables.scss` (spacing, typography), `_base.scss` (reset and body),
+  and `_components.scss` (header, grid, card, footer), combined in
+  `main.scss` with `@use`.
+- Refactored the card to BEM: block `card`, elements `card__image`,
+  `card__title`, `card__description`, `card__link`.
+- Theme colors stay as CSS custom properties so the dark mode toggle keeps
+  working at runtime, while Sass `$` variables handle compile-time values.
+- Added an npm script to compile Sass: `npm run build:css`, which outputs
+  `styles/portfolio.css`.
+
+### How to test
+1. Run `npm install`, then `npm run build:css` - Sass compiles with no errors.
+2. Open `portfolio.html` - the cards look the same and the theme toggle works.
+
