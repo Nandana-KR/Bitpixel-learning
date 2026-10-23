@@ -1,0 +1,25 @@
+{
+  "name": "bitpixel-learning",
+  "version": "1.0.0",
+  "description": "A personal profile webpage built for Day 1 of the BitPixel learning plan.\r It practices semantic HTML (`header`, `nav`, `main`, `section`, `article`,\r `aside`, `footer`), meaningful image `alt` text, a logical heading hierarchy,\r and basic CSS for layout, spacing, colors, and alignment.",
+  "main": "theme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "sass styles/scss/main.scss styles/portfolio.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nandana-KR/Bitpixel-learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nandana-KR/Bitpixel-learning/issues"
+  },
+  "homepage": "https://github.com/Nandana-KR/Bitpixel-learning#readme",
+  "devDependencies": {
+    "sass": "^1.106.1"
+  }
+}
