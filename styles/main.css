@@ -77,6 +77,26 @@ nav.container {
 .sidebar {
   flex: 0 0 250px;
   order: -1;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-surface);
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.sidebar h3 {
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.sidebar p {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  margin-bottom: 10px;
+  padding-left: 18px;
 }
 
 @media (max-width: 768px) {
