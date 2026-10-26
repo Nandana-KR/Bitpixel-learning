@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+  <link rel="stylesheet" href="styles/faq.css">
+</head>
+
+<body>
+  <div id="accordionGroup" class="accordion">
+    <h3>
+      <button type="button" aria-expanded="false" class="accordion-ques" aria-controls="sect1" id="accordion1id">
+        <span class="accordion-title">
+          FAQ:Personal info structure
+        </span>
+      </button>
+    </h3>
+    <div id="sect1" aria-labelledby="accordion1id" class="accordion-anspanel">
+
+      <fieldset class="info-box">
+        <legend class="top-card">info</legend>
+        <p>
+          <label for="name1">
+            Field Name:
+            <span aria-hidden="true">
+              *
+            </span>
+          </label>
+          <input type="text" id="name1" value="John">
+          <label for="email">Email ID:</label>
+          <input type="email" id="email" aria-required="true">
+        </p>
+      </fieldset>
+    </div>
+    <!--item 2 goes HERE -->
+    <h3>
+      <button type="button" aria-expanded="false" class="accordion-ques" aria-controls="sect2" id="accordion2id">
+        <span class="accordion-title">
+          FAQ:Billing address structure
+        </span>
+      </button>
+    </h3>
+    <div id="sect2" aria-labelledby="accordion2id" class="accordion-anspanel">
+      <fieldset class="info-box">
+        <legend class="top-card">Bill info</legend>
+        <p>
+          <label for="address1">Address:</label>
+          <input type="text" id="address1">
+        </p>
+
+      </fieldset>
+
+    </div>
+
+    <!--item 3-->
+    <h3>
+      <button type="button" aria-expanded="false" class="accordion-ques" aria-controls="sect3" id="accordion3id">
+        <span class="accordion-title">
+          FAQ:Can I change my address?
+        </span>
+      </button>
+    </h3>
+    <div id="sect3" aria-labelledby="accordion3id" class="accordion-anspanel">
+      <fieldset class="info-box">
+        <legend class="top-card">Update bill info</legend>
+        <p>
+          Yes,Give updated Address.
+          <label for="address2">Address:</label>
+          <input type="text" id="address2">
+        </p>
+
+      </fieldset>
+
+    </div>
+  </div>
+  <script src="accordion.js"></script>
+</body>
+
+</html>
