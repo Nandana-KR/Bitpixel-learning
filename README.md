@@ -270,8 +270,21 @@ toggle code in `accordion.js`.
 2. Click a question - the answer opens and closes.
 3. Press Tab to a question, then Enter or Space - it opens and closes.
 
-## screenshot
-images/styles/screenshot_day_10,jpeg
+### Running the automated test
+The toggle logic is unit-tested with Jest.
 
-> Note: Still left to do -  Jest test for the toggle.
+1. Run `npm install` to install dependencies (including Jest).
+2. Run `npm test`.
+3. The test passes - it confirms that toggling adds the `is-open` class to the
+   panel and sets the button's `aria-expanded` to `true`.
+
+The toggle logic was moved into a `toggleAccordion(button)` function in
+`accordion.js` and exported with `module.exports` so the test can import and
+check it directly.
+
+
+### Day 10 Screenshots
+- `images/Screenshot_Day_10.jpeg` - the FAQ accordion
+- `images/Screenshot_day_10_unit_test.png` - Jest test passing
+
 
