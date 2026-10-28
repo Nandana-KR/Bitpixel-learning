@@ -288,3 +288,34 @@ check it directly.
 - `images/Screenshot_day_10_unit_test.png` - Jest test passing
 
 
+## Day 11 - Responsive Design (Mobile-First)
+
+Refactored the site to a mobile-first approach, added tablet and desktop
+breakpoints, and made the typography scale fluidly.
+
+### What I did
+- Refactored `styles/main.css` to mobile-first: the base styles describe the
+  phone layout (single column, stacked), and `min-width` media queries add
+  changes as the screen grows.
+- Added two breakpoints: tablet at `768px` (profile card becomes a row) and
+  desktop at `1024px` (sidebar sits beside the main content).
+- Made typography fluid with `clamp()`. Defined `--font-size-h1`,
+  `--font-size-h2`, and `--font-size-h3` as shared tokens in `styles/token.css`
+  and applied them to the headings.
+- Applied the same fluid headings to the portfolio page by editing the Sass
+  partial `styles/scss/_components.scss` and recompiling with `npm run build:css`.
+- Cleaned up CSS units for consistency: `rem` for font sizes and spacing,
+  `%` for widths relative to a parent, and `px` only for borders and radii.
+  Converted the spacing tokens (`--space-sm/md/lg`) to `rem`.
+
+
+### How to test
+1. Open `index.html` and slowly resize the browser from narrow to wide.
+2. The layout adapts cleanly at mobile, tablet, and desktop widths, with no
+   horizontal scrollbar.
+3. Headings grow and shrink smoothly as the window resizes.
+
+### Day 11 Screenshots
+- `images/Screenshot_Day_11_mobile.jpeg` - stacked single-column layout (mobile)
+- `images/Screenshot_Day_11_tablet.jpeg` - profile row, sidebar on top (tablet)
+- `images/Screenshot_Day_11_desktop.jpeg` - sidebar beside content (desktop)
