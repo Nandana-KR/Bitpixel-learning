@@ -14,6 +14,11 @@ a {
   background-color: var(--color-header);
   margin-bottom: 30px;
 
+  h1 {
+    font-size: var(--font-size-h1);
+  }
+
+
   a {
     font-size: 20px;
     text-decoration: none;
@@ -52,6 +57,10 @@ a {
     object-position: center;
     background: #f4f6f8;
     border-radius: $radius;
+  }
+
+  &__title {
+    font-size: var(--font-size-h2);
   }
 
   &__title,

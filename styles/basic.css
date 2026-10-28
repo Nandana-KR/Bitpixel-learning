@@ -10,7 +10,7 @@ body {
 
 header {
 
-  padding: 24px 0;
+  padding: var(--space-lg) 0;
 
   background-color: var(--color-header);
 }
@@ -27,6 +27,7 @@ header a:hover {
 
 header h1 {
   margin: 0 0 4px;
+  font-size: var(--font-size-h1);
 }
 
 header p {
@@ -71,6 +72,12 @@ nav a:focus {
 
 h2 {
   margin-bottom: 12px;
+  font-size: var(--font-size-h2);
+
+}
+
+h3 {
+  font-size: var(--font-size-h3);
 }
 
 p {
@@ -99,28 +106,28 @@ footer {
   background-color: var(--color-primary-dark);
   color: #ffffff;
   text-align: center;
-  padding: 24px 0;
-  margin-top: 40px;
+  padding: var(--space-lg) 0;
+  margin-top: var(--space-lg);
 }
 
 form {
-  margin-top: 16px;
+  margin-top: var(--space-md);
 }
 
 form div {
-  margin-bottom: 16px;
+  margin-bottom: var(--space-md);
 }
 
 label {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: var(--space-sm);
   font-weight: 600;
 }
 
 input,
 textarea {
-  width: 30%;
-  padding: 10px;
+  width: 50%;
+  padding: var(--space-sm);
   border: 1px solid #d1d5db;
   border-radius: 6px;
   font-family: inherit;
@@ -133,7 +140,7 @@ textarea {
 button {
   background-color: var(--color-primary);
   color: var(--color-surface);
-  padding: 10px 20px;
+  padding: var(--space-sm) var(--space-md);
   border: none;
   border-radius: 6px;
   font-size: 1rem;
