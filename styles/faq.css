@@ -1,0 +1,55 @@
+.accordion {
+  max-width: 600px;
+  margin: 40px auto;
+  border: 2px solid #0f0e0e;
+  border-radius: 8px;
+  background-color: rgb(237, 242, 241);
+}
+
+.accordion-ques {
+  padding: 10px 10px;
+  text-align: center;
+  margin: 0 14rem;
+  cursor: pointer;
+}
+
+.accordion-title {
+  text-align: center;
+  margin: 10px 10px;
+}
+
+.accordion-anspanel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-anspanel.is-open {
+  max-height: 500px;
+}
+
+
+.info-box {
+  /*margin: 20px 20px;*/
+  padding: 10px;
+}
+
+.top-card {
+  margin: 0 14rem;
+}
+
+
+.accordion-anspanel label,
+.accordion-anspanel input {
+  display: inline-block;
+  /*margin: 10px auto;*/
+
+}
+
+.accordion-anspanel p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}

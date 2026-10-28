@@ -254,3 +254,37 @@ Introduced Sass and the BEM naming convention for more scalable styles.
 1. Run `npm install`, then `npm run build:css` - Sass compiles with no errors.
 2. Open `portfolio.html` - the cards look the same and the theme toggle works.
 
+## Day 10 - Accordion
+
+Made an accordion in `faq.html`, with styles in `styles/faq.css` and the
+toggle code in `accordion.js`.
+
+- Click a question to open or close its answer.
+- It also works with the keyboard - press Enter or Space.
+- The answer opens and closes with a smooth animation.
+- The `aria-expanded` attribute changes to true or false so screen readers
+  know if a section is open or closed.
+
+### How to test
+1. Open `faq.html` in a browser.
+2. Click a question - the answer opens and closes.
+3. Press Tab to a question, then Enter or Space - it opens and closes.
+
+### Running the automated test
+The toggle logic is unit-tested with Jest.
+
+1. Run `npm install` to install dependencies (including Jest).
+2. Run `npm test`.
+3. The test passes - it confirms that toggling adds the `is-open` class to the
+   panel and sets the button's `aria-expanded` to `true`.
+
+The toggle logic was moved into a `toggleAccordion(button)` function in
+`accordion.js` and exported with `module.exports` so the test can import and
+check it directly.
+
+
+### Day 10 Screenshots
+- `images/Screenshot_Day_10.jpeg` - the FAQ accordion
+- `images/Screenshot_day_10_unit_test.png` - Jest test passing
+
+
