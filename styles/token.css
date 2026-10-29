@@ -6,7 +6,7 @@
   --color-primary-dark: #1e3a5f;
   --color-header: #acc0d8;
   --color-heading: #1e3a5f;
-
+  --color-link-sidebar: #0d9488;
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
@@ -49,9 +49,12 @@
   padding: 0px;
   margin-left: 1px;
   text-decoration: none;
+  transition: opacity 0.2s ease;
+
 
 }
 
 #theme-toggle:hover {
   text-decoration: underline;
+  opacity: 0.7;
 }

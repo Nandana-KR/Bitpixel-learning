@@ -319,3 +319,27 @@ breakpoints, and made the typography scale fluidly.
 - `images/Screenshot_Day_11_mobile.jpeg` - stacked single-column layout (mobile)
 - `images/Screenshot_Day_11_tablet.jpeg` - profile row, sidebar on top (tablet)
 - `images/Screenshot_Day_11_desktop.jpeg` - sidebar beside content (desktop)
+
+## Day 12 - CSS Transitions and Animations
+
+Added smooth animations to make the site feel more polished, without being
+distracting.
+
+### What I animated
+- **Cards** - lift up a little when you hover over them.
+- **Buttons** - background color fades on hover.
+- **Links (nav, header, sidebar)** - fade slightly on hover using opacity.
+- **Sidebar links** - given a different teal color (`--color-link-sidebar`) so
+  they stand out from the other links in a professional way.
+- **Theme toggle** - the page colors fade smoothly when switching light/dark
+  mode, instead of changing instantly.
+
+### Why I made these choices
+- I animated only the needed properties (`background-color`, `color`,
+  `opacity`, `transform`), not `all`, so it stays fast.
+- I used `transform` for the card lift because it is smooth and does not move
+  the page layout.
+- I used `opacity` for link hovers because it fades smoothly and is light on
+  performance.
+- I kept the time short (0.2s to 0.3s) so the animations are quick and not
+  distracting.
