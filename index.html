@@ -24,15 +24,15 @@
 </head>
 
 <body>
-  <header>
-    <div class="container profile-card">
+  <header class="header">
+    <div class="container header__inner">
 
-      <img src="images/nandana.jpg" alt="Profile Pic of Nandana">
-      <div class="designation">
-        <h1>Nandana Ravindran</h1>
-        <p>Developer | BitPixel Solution</p>
-        <a href="portfolio.html">Portfolio</a>
-        <button id="theme-toggle">🌙Dark</button>
+      <img src="images/nandana.jpg" alt="Profile Pic of Nandana" class="header__image">
+      <div class="header__designation">
+        <h1 class="header__name">Nandana Ravindran</h1>
+        <p class="header__title">Developer | BitPixel Solution</p>
+        <a class="header__link" href="portfolio.html">Portfolio</a>
+        <button class="header__toggle" id="theme-toggle">🌙Dark</button>
 
       </div>
     </div>
@@ -56,11 +56,12 @@
       <aside class="sidebar">
 
 
-        <h3>Currently Learning</h3>
-        <p>Semantic HTML, accessibility, and CSS fundamentals as part of my front-end journey.</p>
+        <h3 class="sidebar_heading">Currently Learning</h3>
+        <p class=".sidebar__text">Semantic HTML, accessibility, and CSS fundamentals as part of my front-end journey.
+        </p>
 
-        <h3>Interests</h3>
-        <ul>
+        <h3 class="sidebar_heading">Interests</h3>
+        <ul .sidebar__list>
           <li>Clean, accessible user interfaces</li>
           <li>Front-end performance</li>
           <li>Continuous learning</li>
@@ -68,8 +69,8 @@
 
         <h3>Find Me</h3>
         <ul>
-          <li><a href="https://github.com/Nandana-KR">GitHub</a></li>
-          <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+          <li><a class="sidebar__link sidebar__link--github" href="https://github.com/Nandana-KR">GitHub</a></li>
+          <li><a class="sidebar__link sidebar__link--linkedin" href="https://www.linkedin.com">LinkedIn</a></li>
         </ul>
       </aside>
 

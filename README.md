@@ -343,3 +343,35 @@ distracting.
   performance.
 - I kept the time short (0.2s to 0.3s) so the animations are quick and not
   distracting.
+
+
+## Day 13 - BEM Naming Convention
+
+Refactored the header (and extra: sidebar) to use BEM naming, so the CSS is
+consistent with no class conflicts. The card was already BEM from Day 9.
+
+### BEM naming rules I follow
+- **Block** - a standalone component. Example: `.header`, `.card`, `.sidebar`.
+- **Element** - a part inside a block, joined with two underscores (`__`).
+  Example: `.header__link`, `.card__title`, `.sidebar__heading`.
+- **Modifier** - a variation, joined with two dashes (`--`).
+  Example: `.sidebar__link--github`, `.sidebar__link--linkedin`.
+
+### Guidelines
+- Elements stay flat - I use `.card__title`, not `.card__body__title`.
+- The base class holds shared styles; a modifier only holds what is different.
+  Example: `.sidebar__link` sets the shared transition, and the modifiers
+  `--github` / `--linkedin` only change the link color.
+- Utility classes like `.container` can sit next to a BEM class on the same
+  element (for example `class="container header__inner"`).
+- Colors come from CSS variables in `:root` (and `.dark` for dark mode), so the
+  BEM classes stay consistent and work in both themes.
+
+### What I refactored
+- Header: `header` tag styles became the `.header` block with elements like
+  `.header__inner`, `.header__image`, `.header__name`, `.header__title`,
+  `.header__link`, and `.header__toggle`.
+- Sidebar: `.sidebar` block with `.sidebar__heading`, `.sidebar__text`,
+  `.sidebar__list`, `.sidebar__link`, plus `--github` and `--linkedin` modifiers.
+- Removed old class names (like `.profile-card` and `.designation`) so there are
+  no leftover or conflicting styles.
