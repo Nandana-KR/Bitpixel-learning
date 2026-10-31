@@ -4,38 +4,45 @@ body {
   color: var(--color-text);
   margin: 0;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 
 
-header {
+.header {
 
-  padding: 24px 0;
+  padding: var(--space-lg) 0;
 
   background-color: var(--color-header);
+  transition: background-color 0.3s ease;
+
 }
 
-header a {
-  text-decoration: none;
-  color: var(--color-primary);
-  font-weight: 600;
+.header__link {
+  color: var(--color-link-header);
+  transition: color 0.2s ease, opacity 0.2s ease;
+
 }
 
-header a:hover {
+.header__link:hover {
+  /*color: var(--color-primary-dark);*/
   text-decoration: underline;
+  opacity: 0.7;
 }
 
-header h1 {
+.header__name {
   margin: 0 0 4px;
+  font-size: var(--font-size-h1);
 }
 
-header p {
+.header__title {
   margin: 0;
   color: var(--color-text);
 }
 
 
-header img {
+.header__image {
   height: 150px;
   width: 150px;
   object-fit: cover;
@@ -52,15 +59,15 @@ nav a {
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s, opacity 0.2s ease;
 
 
 }
 
 nav a:hover {
   text-decoration: underline;
-  background-color: var(--color-primary);
-  color: #ffffff;
+  /*color: #ffffff;*/
+  opacity: 0.7;
 }
 
 
@@ -71,6 +78,12 @@ nav a:focus {
 
 h2 {
   margin-bottom: 12px;
+  font-size: var(--font-size-h2);
+
+}
+
+h3 {
+  font-size: var(--font-size-h3);
 }
 
 p {
@@ -99,28 +112,30 @@ footer {
   background-color: var(--color-primary-dark);
   color: #ffffff;
   text-align: center;
-  padding: 24px 0;
-  margin-top: 40px;
+  padding: var(--space-lg) 0;
+  margin-top: var(--space-lg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 form {
-  margin-top: 16px;
+  margin-top: var(--space-md);
 }
 
 form div {
-  margin-bottom: 16px;
+  margin-bottom: var(--space-md);
 }
 
 label {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: var(--space-sm);
   font-weight: 600;
 }
 
 input,
 textarea {
-  width: 30%;
-  padding: 10px;
+  width: 50%;
+  padding: var(--space-sm);
   border: 1px solid #d1d5db;
   border-radius: 6px;
   font-family: inherit;
@@ -130,17 +145,19 @@ textarea {
 }
 
 
-button {
+.header__toggle {
   background-color: var(--color-primary);
   color: var(--color-surface);
-  padding: 10px 20px;
+  padding: var(--space-sm) var(--space-md);
   border: none;
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+
 }
 
-button:hover {
+.header__toggle:hover {
   background-color: var(--color-primary-dark);
 
 
