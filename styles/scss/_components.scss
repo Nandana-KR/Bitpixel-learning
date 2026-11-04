@@ -1,14 +1,12 @@
 @use "variables" as *;
+@use "mixin" as *;
 
 a {
   color: var(--color-primary);
 }
 
 .page-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-center(column);
   gap: $space-md;
   padding: $space-lg;
   background-color: var(--color-header);
@@ -16,6 +14,7 @@ a {
 
   h1 {
     font-size: var(--font-size-h1);
+
   }
 
 
@@ -23,9 +22,12 @@ a {
     font-size: 20px;
     text-decoration: none;
     font-weight: 600;
+    @include smooth-transition(opacity 0.2s ease);
+
 
     &:hover {
       text-decoration: underline;
+      opacity: 0.7;
     }
   }
 }
@@ -44,13 +46,9 @@ a {
   overflow: hidden;
   background: var(--color-surface);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  @include flex-center(column);
   margin: $space-sm;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
+  @include smooth-transition(transform 0.2s ease, box-shadow 0.2s ease);
 
   &__image {
     width: 100%;
@@ -79,7 +77,7 @@ a {
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
-    transition: background-color 0.2s ease;
+
 
 
     &:hover {

@@ -375,3 +375,50 @@ consistent with no class conflicts. The card was already BEM from Day 9.
   `.sidebar__list`, `.sidebar__link`, plus `--github` and `--linkedin` modifiers.
 - Removed old class names (like `.profile-card` and `.designation`) so there are
   no leftover or conflicting styles.
+
+## Day 14 - Sass Partials, Nesting and Mixins
+
+Organized the portfolio styles into Sass partials and added two mixins to
+remove repeated CSS.
+
+### Partials (in `styles/scss/`)
+- `_variables.scss` - spacing, radius and font variables.
+- `_base.scss` - reset and `body` styles.
+- `_mixin.scss` - reusable mixins.
+- `_components.scss` - page header, portfolio grid, card and footer.
+- `main.scss` - loads the partials with `@use`.
+
+### Nesting
+- The card is written with the `&` parent selector, so `&__title` becomes
+  `.card__title` and `&:hover` becomes `.card:hover`. This keeps BEM names
+  short and in one place.
+- The page header nests `h1` and `a` inside `.page-header`.
+
+### Mixins
+- `flex-center($direction: row, $justify: center, $align: center)` - sets up a
+  flex container. All three values have defaults, so `@include flex-center;`
+  gives a centered row, and `@include flex-center(column);` gives a centered
+  column. Used on `.page-header` and `.card`.
+- `smooth-transition($property...)` - sets a `transition`. The `...` lets it
+  take one or many properties, for example
+  `@include smooth-transition(transform 0.2s ease, box-shadow 0.2s ease);`.
+  Used on the page header link and the card.
+
+### Notes
+- Sass only compiles to `styles/portfolio.css`, so the mixins only affect
+  `portfolio.html`. `index.html` still uses plain CSS (`basic.css` and
+  `main.css`). Moving it to Sass would be a good next step.
+- I only made mixins for patterns that repeat. A single property like
+  `border-radius` is better as a variable.
+
+### Build
+- Run `npm install`, then `npm run build:css`.
+- This compiles `styles/scss/main.scss` into `styles/portfolio.css` with no
+  errors.
+- Always recompile after editing a `.scss` file. The browser reads the
+  compiled CSS, not the Sass.
+
+### How to test
+1. Run `npm run build:css` and confirm there are no errors.
+2. Open `portfolio.html`. The header and cards look the same as before.
+3. Hover a card and the header link. Both animate smoothly.
