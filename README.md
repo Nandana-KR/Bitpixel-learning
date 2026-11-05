@@ -422,3 +422,25 @@ remove repeated CSS.
 1. Run `npm run build:css` and confirm there are no errors.
 2. Open `portfolio.html`. The header and cards look the same as before.
 3. Hover a card and the header link. Both animate smoothly.
+
+
+## Day 15 - JavaScript Utility Functions
+
+Practiced JavaScript basics by writing small utility functions in `utils.js`,
+each covered by Jest tests in `utils.test.js`.
+
+### Functions
+- Calculator: `add`, `subtract`, `multiply`, `divide`. `divide` throws an error
+  when the second number is 0.
+- Strings: `toUpper`, `toLower`, `stringLength`, `capitalize`.
+
+### What I practiced
+- Variables, number and string types, and operators.
+- Returning values from functions and exporting them with `module.exports`.
+- Edge cases: dividing by zero, and an empty string in `capitalize`.
+- `length` is a property, so it has no parentheses (`text.length`).
+
+### How to test
+1. Run `npm install`.
+2. Run `npm test`.
+3. All tests pass, covering the calculator and string functions.
