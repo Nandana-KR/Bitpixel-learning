@@ -444,3 +444,15 @@ each covered by Jest tests in `utils.test.js`.
 1. Run `npm install`.
 2. Run `npm test`.
 3. All tests pass, covering the calculator and string functions.
+
+
+## Day 16 - To-Do List Logic (Console)
+
+Practiced control flow, loops, and functions by building simple to-do list
+logic in `todo.js`. It runs in the console with `node todo.js`.
+
+### Functions
+- `addTask(task)` - pushes a task into the `result` array.
+- `removeTask(task)` - loops through the array, removes the matching task with
+  `splice`, and prints "Not found" if nothing matched.
+- `listTask()` - prints every task, or "No item found" when the list is empty.
