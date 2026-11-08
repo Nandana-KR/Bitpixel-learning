@@ -446,8 +446,7 @@ each covered by Jest tests in `utils.test.js`.
 3. All tests pass, covering the calculator and string functions.
 
 
-## Day 16 - To-Do List Logic (Console)
-
+## Day 16 - To-Do List Logic 
 Practiced control flow, loops, and functions by building simple to-do list
 logic in `todo.js`. It runs in the console with `node todo.js`.
 
