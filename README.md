@@ -455,3 +455,23 @@ logic in `todo.js`. It runs in the console with `node todo.js`.
 - `removeTask(task)` - loops through the array, removes the matching task with
   `splice`, and prints "Not found" if nothing matched.
 - `listTask()` - prints every task, or "No item found" when the list is empty.
+
+## Day 17 - DOM Manipulation and Events
+
+Added "Read more" buttons to the Skills section of `index.html`, with the code in `dom.js`.
+
+### How it works
+- Each skill has a "Read more" button and a hidden detail line.
+- Clicking the button shows the detail and changes the text to "Read less".
+- Clicking again hides it.
+- `aria-expanded` updates so screen readers know if it is open.
+
+### How to use
+1. Open `index.html`.
+2. Click "Read more" under a skill.
+3. Keyboard: press Tab to reach a button, then Enter or Space.
+
+### How to test
+- Each button opens and closes only its own detail line.
+- No errors in the browser Console (F12).
+

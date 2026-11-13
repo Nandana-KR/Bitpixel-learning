@@ -17,7 +17,6 @@
 
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="styles/token.css">
-
   <link rel="stylesheet" href="styles/basic.css">
   <link rel="stylesheet" href="styles/main.css">
 
@@ -57,11 +56,11 @@
 
 
         <h3 class="sidebar_heading">Currently Learning</h3>
-        <p class=".sidebar__text">Semantic HTML, accessibility, and CSS fundamentals as part of my front-end journey.
+        <p class="sidebar__text">Semantic HTML, accessibility, and CSS fundamentals as part of my front-end journey.
         </p>
 
-        <h3 class="sidebar_heading">Interests</h3>
-        <ul .sidebar__list>
+        <h3 class="sidebar__heading">Interests</h3>
+        <ul sidebar__list>
           <li>Clean, accessible user interfaces</li>
           <li>Front-end performance</li>
           <li>Continuous learning</li>
@@ -113,11 +112,53 @@
         <section class="content__section" id="skills">
           <h2>Skills</h2>
           <ul>
-            <li>Python</li>
-            <li>Javascript</li>
-            <li>HTML</li>
-            <li>Css</li>
-            <li>Sitecore XM</li>
+            <li>
+              Python
+              <button type="button" aria-expanded="false" class="show-hidden" aria-controls="view1" id="viewid1">
+                Read More
+              </button>
+              <div class="experience" id="view1">
+                <p>10 years of experience in python</p>
+              </div>
+            </li>
+
+            <li>
+              Javascript
+              <button type="button" aria-expanded="false" class="show-hidden" aria-controls="view2" id="viewid2">
+                Read More
+              </button>
+              <div class="experience" id="view2">
+                <p>15 years of experience in Javascript</p>
+              </div>
+            </li>
+            <li>
+              HTML
+              <button type="button" aria-expanded="false" class="show-hidden" aria-controls="view3" id="viewid3">
+                Read More
+              </button>
+              <div class="experience" id="view3">
+                <p>Semantic HTML, forms and accessibility.</p>
+              </div>
+            </li>
+            <li>
+              CSS
+              <button type="button" aria-expanded="false" class="show-hidden" aria-controls="view4" id="viewid4">
+                Read More
+              </button>
+              <div class="experience" id="view4">
+                <p>Flexbox, Grid, responsive design, Sass and BEM.</p>
+              </div>
+            </li>
+            <li>
+              Sitecore XM
+              <button type="button" aria-expanded="false" class="show-hidden" aria-controls="view5" id="viewid5">
+                Read More
+              </button>
+              <div class="experience" id="view5">
+                <p>Working with Sitecore XM at BitPixel Solution.</p>
+              </div>
+            </li>
+
           </ul>
         </section>
 
@@ -164,6 +205,7 @@
       <p>&copy; 2026 Nandana Ravindran. All rights reserved.</p>
     </div>
   </footer>
+  <script src="dom.js"></script>
 
   <script src="theme.js"></script>
 
