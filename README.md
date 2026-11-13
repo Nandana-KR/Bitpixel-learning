@@ -475,3 +475,27 @@ Added "Read more" buttons to the Skills section of `index.html`, with the code i
 - Each button opens and closes only its own detail line.
 - No errors in the browser Console (F12).
 
+## Day 18 - Browser Storage (localStorage)
+
+Used `localStorage` to persist the theme preference and to-do items across page reloads.
+
+### Theme
+- `theme.js` saves "dark" or "light" in `localStorage`.
+- When the page loads, it reads the saved value and applies the theme.
+
+### To-do list
+- New page `todo.html` with the code in `todo-storage.js`.
+- Tasks are kept in an array and saved in `localStorage` under the key `"Task"`.
+- `localStorage` only stores text, so the array is saved with `JSON.stringify`
+  and read back with `JSON.parse`.
+- When the page loads, the saved tasks are shown in the list.
+
+### Clear all
+- The "Clear all" button deletes the saved tasks, empties the array, and clears
+  the list.
+- It uses `removeItem("Task")`, so the saved theme is not deleted.
+
+### How to test
+1. Add a few tasks and reload. They are still there.
+2. Switch to dark mode and reload. It stays dark.
+3. Click "Clear all" and reload. The list is empty, and the theme stays.
