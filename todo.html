@@ -7,6 +7,7 @@
   <title>To-Do List</title>
   <link rel="stylesheet" href="styles/token.css">
   <link rel="stylesheet" href="styles/basic.css">
+  <link rel="stylesheet" href="styles/todo.css">
 </head>
 
 <body>
@@ -16,18 +17,19 @@
   <main>
     <h1>My To-Do List</h1>
 
-    <form id="todo-form">
+    <form class="todo-box" id="todo-form">
       <label for="todo-input">New task</label>
       <input type="text" id="todo-input" required>
-      <button type="submit">Add</button>
+      <button class="add" type="submit">Add</button>
     </form>
 
-    <ul id="todo-list"></ul>
+    <ul id="todo-list" class="todo"></ul>
 
     <button type="button" id="clear-btn">Clear all</button>
   </main>
   <script src="theme.js"></script>
   <script src="todo-storage.js"></script>
+
 </body>
 
 </html>

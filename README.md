@@ -494,6 +494,8 @@ Used `localStorage` to persist the theme preference and to-do items across page 
 - The "Clear all" button deletes the saved tasks, empties the array, and clears
   the list.
 - It uses `removeItem("Task")`, so the saved theme is not deleted.
+- Each task has a "remove" button that deletes only that task, from the list and from `localStorage`.
+
 
 ### How to test
 1. Add a few tasks and reload. They are still there.

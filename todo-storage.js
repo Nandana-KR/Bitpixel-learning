@@ -5,25 +5,47 @@ const input = document.getElementById("todo-input");
 const ulist = document.querySelector("#todo-list");
 const clear = document.getElementById("clear-btn");
 let result = JSON.parse(saved) || [];
-result.forEach((item) => {
+
+function showTask(task) {
   const li = document.createElement("li");
-  li.textContent = item;
+  li.classList.add("todo__item");
+  li.textContent = task;
   ulist.appendChild(li);
+  const deleteBtn = document.createElement("button");
+  deleteBtn.classList.add("todo__remove");
+  deleteBtn.textContent = "remove";
+  li.appendChild(deleteBtn);
+  deleteBtn.addEventListener("click", () => {
+    const indx = result.indexOf(task);
+    result.splice(indx, 1);
+    localStorage.setItem("Task", JSON.stringify(result));
+    li.remove();
+  });
+}
+
+function addList(task) {
+  result.push(task);
+  return task;
+}
+
+result.forEach((item) => {
+  showTask(item);
 });
+
+
 add.addEventListener("submit", function (event) {
   event.preventDefault();
-  const li = document.createElement("li");
-  li.textContent = addList(input.value);
-  ulist.appendChild(li);
+  showTask(addList(input.value));
   localStorage.setItem("Task", JSON.stringify(result));
-
+  input.value = "";
 });
+
+
 clear.addEventListener("click", function () {
   localStorage.removeItem("Task");
   result = [];
   ulist.innerHTML = "";
 });
-function addList(task) {
-  result.push(task);
-  return task;
-}
+
+
+
