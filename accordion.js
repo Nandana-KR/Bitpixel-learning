@@ -13,4 +13,7 @@ buttons.forEach(function (button) {
 
 });
 
-module.exports = { toggleAccordion };
+if (typeof module !== "undefined") {
+  module.exports = { toggleAccordion };
+}
+
