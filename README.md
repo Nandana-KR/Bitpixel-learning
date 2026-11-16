@@ -501,3 +501,29 @@ Used `localStorage` to persist the theme preference and to-do items across page 
 1. Add a few tasks and reload. They are still there.
 2. Switch to dark mode and reload. It stays dark.
 3. Click "Clear all" and reload. The list is empty, and the theme stays.
+
+
+## Day 19 - Debugging and Error Handling
+
+Used DevTools (Console, breakpoints, Watch, Application tab) to find and fix
+bugs, and added `try/catch` error handling with user feedback.
+
+### Bug fixes
+- **FAQ console error:** `module is not defined` in `accordion.js`. The export
+  now runs only when `typeof module !== "undefined"`, so Jest still works.
+- **Blank tasks:** inputs with only spaces were saved. The text is now trimmed,
+  and an error message is shown.
+- **Duplicate tasks:** deleting a duplicate removed the wrong item from storage.
+  Exact duplicates are now blocked with a message.
+- **Corrupted storage:** invalid saved data crashed the page in `JSON.parse`.
+  It is now caught, and the list starts empty.
+
+### Error handling
+- Form errors are shown in `<p id="error-msg" role="alert">`, so screen readers
+  announce them.
+
+### How to test
+1. Open `faq.html` - no errors in the Console.
+2. On `todo.html`, add a blank task and a duplicate task - a message appears.
+3. In DevTools, set the saved `Task` value to `hello` and reload - the page
+   still works.

@@ -5,7 +5,15 @@ const input = document.getElementById("todo-input");
 const ulist = document.querySelector("#todo-list");
 const clear = document.getElementById("clear-btn");
 const errorMsg = document.getElementById("error-msg");
-let result = JSON.parse(saved) || [];
+//let result = JSON.parse(saved) || [];
+let result;
+
+try {
+  result = JSON.parse(saved) || [];
+} catch (error) {
+  result = [];
+  console.warn("Saved tasks were broken, starting with an empty list");
+}
 
 function showTask(task) {
   const li = document.createElement("li");
