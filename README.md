@@ -518,9 +518,6 @@ bugs, and added `try/catch` error handling with user feedback.
 - **Corrupted storage:** invalid saved data crashed the page in `JSON.parse`.
   It is now caught, and the list starts empty.
 
-### Error handling
-- Form errors are shown in `<p id="error-msg" role="alert">`, so screen readers
-  announce them.
 
 ### How to test
 1. Open `faq.html` - no errors in the Console.
