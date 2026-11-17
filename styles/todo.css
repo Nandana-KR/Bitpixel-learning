@@ -1,0 +1,30 @@
+.todo__remove {
+  margin-left: var(--space-md);
+  background-color: var(--color-content-button);
+}
+
+.todo__item {
+  margin-left: var(--space-sm);
+  font-size: var(--font-size-h3);
+}
+
+#clear-btn {
+  margin-left: var(--space-sm);
+  background-color: var(--color-content-button);
+
+}
+
+.add {
+  margin-left: var(--space-sm);
+  background-color: rgb(91, 191, 91);
+
+}
+
+.todo-box {
+  width: 30%;
+  margin-left: var(--space-sm);
+}
+
+head title {
+  margin-left: var(--space-sm);
+}

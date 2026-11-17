@@ -475,3 +475,75 @@ Added "Read more" buttons to the Skills section of `index.html`, with the code i
 - Each button opens and closes only its own detail line.
 - No errors in the browser Console (F12).
 
+## Day 18 - Browser Storage (localStorage)
+
+Used `localStorage` to persist the theme preference and to-do items across page reloads.
+
+### Theme
+- `theme.js` saves "dark" or "light" in `localStorage`.
+- When the page loads, it reads the saved value and applies the theme.
+
+### To-do list
+- New page `todo.html` with the code in `todo-storage.js`.
+- Tasks are kept in an array and saved in `localStorage` under the key `"Task"`.
+- `localStorage` only stores text, so the array is saved with `JSON.stringify`
+  and read back with `JSON.parse`.
+- When the page loads, the saved tasks are shown in the list.
+
+### Clear all
+- The "Clear all" button deletes the saved tasks, empties the array, and clears
+  the list.
+- It uses `removeItem("Task")`, so the saved theme is not deleted.
+- Each task has a "remove" button that deletes only that task, from the list and from `localStorage`.
+
+
+### How to test
+1. Add a few tasks and reload. They are still there.
+2. Switch to dark mode and reload. It stays dark.
+3. Click "Clear all" and reload. The list is empty, and the theme stays.
+
+
+## Day 19 - Debugging and Error Handling
+
+Used DevTools (Console, breakpoints, Watch, Application tab) to find and fix
+bugs, and added `try/catch` error handling with user feedback.
+
+### Bug fixes
+- **FAQ console error:** `module is not defined` in `accordion.js`. The export
+  now runs only when `typeof module !== "undefined"`, so Jest still works.
+- **Blank tasks:** inputs with only spaces were saved. The text is now trimmed,
+  and an error message is shown.
+- **Duplicate tasks:** deleting a duplicate removed the wrong item from storage.
+  Exact duplicates are now blocked with a message.
+- **Corrupted storage:** invalid saved data crashed the page in `JSON.parse`.
+  It is now caught, and the list starts empty.
+
+
+### How to test
+1. Open `faq.html` - no errors in the Console.
+2. On `todo.html`, add a blank task and a duplicate task - a message appears.
+3. In DevTools, set the saved `Task` value to `hello` and reload - the page
+   still works.
+
+
+## Day 20 - Unit Testing with Jest
+
+Set up Jest with a coverage report, and wrote tests for the utility functions
+and the accordion toggle logic.
+
+### Setup
+- Jest and `jest-environment-jsdom` are installed as dev dependencies.
+- `package.json` sets `"testEnvironment": "jsdom"`, so tests can use the DOM.
+- `coverage/` is listed in `.gitignore`, because the report is generated.
+
+### Tests
+- `utils.test.js` (12 tests) - calculator and string functions, including
+  divide by zero, negative results, decimals and an empty string.
+- `accordion.test.js` (3 tests) - toggling opens a closed panel, toggling closes
+  an open panel, and clicking a question opens its panel. Each test also checks
+  `aria-expanded`.
+
+### How to run
+- `npm test` - run all tests.
+- `npm run test:coverage` - run tests and create a coverage report. Open
+  `coverage/lcov-report/index.html` to view it in the browser.
