@@ -5,6 +5,7 @@
   "main": "theme.js",
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "build:css": "sass styles/scss/main.scss styles/portfolio.css"
   },
   "jest": {

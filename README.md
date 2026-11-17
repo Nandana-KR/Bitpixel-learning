@@ -524,3 +524,26 @@ bugs, and added `try/catch` error handling with user feedback.
 2. On `todo.html`, add a blank task and a duplicate task - a message appears.
 3. In DevTools, set the saved `Task` value to `hello` and reload - the page
    still works.
+
+
+## Day 20 - Unit Testing with Jest
+
+Set up Jest with a coverage report, and wrote tests for the utility functions
+and the accordion toggle logic.
+
+### Setup
+- Jest and `jest-environment-jsdom` are installed as dev dependencies.
+- `package.json` sets `"testEnvironment": "jsdom"`, so tests can use the DOM.
+- `coverage/` is listed in `.gitignore`, because the report is generated.
+
+### Tests
+- `utils.test.js` (12 tests) - calculator and string functions, including
+  divide by zero, negative results, decimals and an empty string.
+- `accordion.test.js` (3 tests) - toggling opens a closed panel, toggling closes
+  an open panel, and clicking a question opens its panel. Each test also checks
+  `aria-expanded`.
+
+### How to run
+- `npm test` - run all tests.
+- `npm run test:coverage` - run tests and create a coverage report. Open
+  `coverage/lcov-report/index.html` to view it in the browser.
