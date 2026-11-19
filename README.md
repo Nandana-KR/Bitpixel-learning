@@ -547,3 +547,25 @@ and the accordion toggle logic.
 - `npm test` - run all tests.
 - `npm run test:coverage` - run tests and create a coverage report. Open
   `coverage/lcov-report/index.html` to view it in the browser.
+
+  ## Day 21 - Arrays, Objects and Array Methods
+
+Built a student management module in `students.js`. Each student is an object
+(`id`, `name`, `age`) stored in an array. Run it with `node students.js`.
+
+### CRUD
+- `addStudent(student)` - adds a student with `push`.
+- `getAllStudents()` / `getStudentById(id)` - reads all students, or one by id
+  with `find`.
+- `updateStudent(id, age)` - finds the student and changes the age. Returns
+  "student not found" if the id does not exist.
+- `deleteStudent(id)` - finds the position with `findIndex` and removes it with
+  `splice`. Returns "student not found" if the id does not exist.
+
+### Search, filter, sort and map
+- `searchStudent(text)` - students whose name contains the text, ignoring case
+  (`filter` + `includes`).
+- `filterByAge(min, max)` - students in an age range (`filter`).
+- `sortByAge()` - students ordered by age, oldest first (`sort` with a compare
+  function on a copy, so the original array keeps its order).
+- `getStudentNames()` - a list of just the names (`map`).
