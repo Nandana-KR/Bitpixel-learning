@@ -569,3 +569,32 @@ Built a student management module in `students.js`. Each student is an object
 - `sortByAge()` - students ordered by age, oldest first (`sort` with a compare
   function on a copy, so the original array keeps its order).
 - `getStudentNames()` - a list of just the names (`map`).
+
+
+## Day 22 - ES6 Features
+
+Practised destructuring, template literals, rest parameters and spread in
+`es6.js`, using a sample shop order. Run it with `node es6.js`.
+
+### Destructuring
+Used to read only the values each function needs from the order.
+- `getOrderHeader` - reads `id` and `status` to build the order heading.
+- `getShippingCity` - uses nested destructuring to reach the customer's city.
+- `deliveryNote` - sets a default value ("No note") when the note is missing.
+- `getPublicCustomer` - removes the `password`, so private data is not shared.
+- `getItemMap` - reads each item's name, price and quantity inside `map`.
+
+### Template literals
+Used to build readable text with backticks and `${}`, for example the order
+heading and each item line (`Notebook*2=240`).
+
+### Rest parameters
+- `getOrderTotal(...prices)` - accepts any number of prices and returns the total.
+
+### Spread
+- `getOrderAmount` - calculates each item's total and spreads them into
+  `getOrderTotal`.
+- `markDelivered` - returns a copy of the order with the status set to
+  "delivered", without changing the original order.
+
+
