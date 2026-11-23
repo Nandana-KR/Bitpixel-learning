@@ -597,4 +597,25 @@ heading and each item line (`Notebook*2=240`).
 - `markDelivered` - returns a copy of the order with the status set to
   "delivered", without changing the original order.
 
+## Day 23 - Scope, Closures and Execution Context
 
+Practised scope and closures in `practise.js` (opened with `practise.html`),
+and checked them in DevTools using breakpoints and the Scope panel.
+
+### What I learned
+- **Hoisting** - `var` is `undefined` before its line runs. Functions can be
+  called before they are written.
+- **TDZ** - `let` and `const` cannot be used before their line runs.
+- **Scope chain** - a function looks for a variable inside itself first, then
+  outside.
+- **Shadowing** - a variable inside a block or function can hide an outer
+  variable with the same name.
+- **Closure** - an inner function remembers the outer function's variables,
+  even after the outer function has finished.
+- **Execution context** - every function call gets its own fresh variables.
+
+### Counter examples
+- **Basic counter** - each call adds 1 and remembers the new value.
+- **Two counters** - each counter has its own count, so they do not affect each
+  other.
+- **Add, minus, reset** - three functions share one count.
