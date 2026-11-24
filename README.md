@@ -547,3 +547,75 @@ and the accordion toggle logic.
 - `npm test` - run all tests.
 - `npm run test:coverage` - run tests and create a coverage report. Open
   `coverage/lcov-report/index.html` to view it in the browser.
+
+  ## Day 21 - Arrays, Objects and Array Methods
+
+Built a student management module in `students.js`. Each student is an object
+(`id`, `name`, `age`) stored in an array. Run it with `node students.js`.
+
+### CRUD
+- `addStudent(student)` - adds a student with `push`.
+- `getAllStudents()` / `getStudentById(id)` - reads all students, or one by id
+  with `find`.
+- `updateStudent(id, age)` - finds the student and changes the age. Returns
+  "student not found" if the id does not exist.
+- `deleteStudent(id)` - finds the position with `findIndex` and removes it with
+  `splice`. Returns "student not found" if the id does not exist.
+
+### Search, filter, sort and map
+- `searchStudent(text)` - students whose name contains the text, ignoring case
+  (`filter` + `includes`).
+- `filterByAge(min, max)` - students in an age range (`filter`).
+- `sortByAge()` - students ordered by age, oldest first (`sort` with a compare
+  function on a copy, so the original array keeps its order).
+- `getStudentNames()` - a list of just the names (`map`).
+
+
+## Day 22 - ES6 Features
+
+Practised destructuring, template literals, rest parameters and spread in
+`es6.js`, using a sample shop order. Run it with `node es6.js`.
+
+### Destructuring
+Used to read only the values each function needs from the order.
+- `getOrderHeader` - reads `id` and `status` to build the order heading.
+- `getShippingCity` - uses nested destructuring to reach the customer's city.
+- `deliveryNote` - sets a default value ("No note") when the note is missing.
+- `getPublicCustomer` - removes the `password`, so private data is not shared.
+- `getItemMap` - reads each item's name, price and quantity inside `map`.
+
+### Template literals
+Used to build readable text with backticks and `${}`, for example the order
+heading and each item line (`Notebook*2=240`).
+
+### Rest parameters
+- `getOrderTotal(...prices)` - accepts any number of prices and returns the total.
+
+### Spread
+- `getOrderAmount` - calculates each item's total and spreads them into
+  `getOrderTotal`.
+- `markDelivered` - returns a copy of the order with the status set to
+  "delivered", without changing the original order.
+
+## Day 23 - Scope, Closures and Execution Context
+
+Practised scope and closures in `practise.js` (opened with `practise.html`),
+and checked them in DevTools using breakpoints and the Scope panel.
+
+### What I learned
+- **Hoisting** - `var` is `undefined` before its line runs. Functions can be
+  called before they are written.
+- **TDZ** - `let` and `const` cannot be used before their line runs.
+- **Scope chain** - a function looks for a variable inside itself first, then
+  outside.
+- **Shadowing** - a variable inside a block or function can hide an outer
+  variable with the same name.
+- **Closure** - an inner function remembers the outer function's variables,
+  even after the outer function has finished.
+- **Execution context** - every function call gets its own fresh variables.
+
+### Counter examples
+- **Basic counter** - each call adds 1 and remembers the new value.
+- **Two counters** - each counter has its own count, so they do not affect each
+  other.
+- **Add, minus, reset** - three functions share one count.
