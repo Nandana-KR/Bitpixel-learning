@@ -619,3 +619,29 @@ and checked them in DevTools using breakpoints and the Scope panel.
 - **Two counters** - each counter has its own count, so they do not affect each
   other.
 - **Add, minus, reset** - three functions share one count.
+
+## Day 24 - Asynchronous JavaScript
+
+Practised timers and callbacks in `practise.js` ( `practise.html`).
+
+### What I learned
+- **Sync vs async** - normal code runs line by line. Async code (timers,
+  clicks) runs later, after the current code finishes.
+- **setTimeout** - runs a function once after a delay.
+- **setInterval / clearInterval** - runs a function again and again until
+  it is stopped with its ID.
+- **Callback** - a function passed into another function, to be called later.
+
+### Examples
+- **Timer** - prints "timer" after 5 seconds.
+- **Event callback** - the "click me" button counts clicks (uses a closure).
+- **Countdown** - Start, Stop and Reset buttons. Start counts down every
+  second, Stop pauses it, and clicking Start many times does not speed it up.
+- **Callback with data** - `getUser(id, callback)` returns a user after
+  1 second, because `return` cannot give back data that arrives later.
+
+### How to test
+1. Open `practise.html` and the Console (F12).
+2. Click Start - the number goes down every second.
+3. Click Stop - it pauses. Click Start - it continues.
+4. After 1 second, the user's id and name appear in the Console.
