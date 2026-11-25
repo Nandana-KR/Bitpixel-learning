@@ -1,3 +1,4 @@
+
 console.log("--Hoisting---");
 
 //getName();
@@ -113,33 +114,157 @@ console.log("-- counter closure--");
 
 console.log("-- counter with increment, decrement, reset --");
 
-function Counter() {
+//function Counter() {
+//  let count = 0;
+//  function increment() {
+//    count += 1;
+//    return count;
+//  }
+//  function decrement() {
+//    count -= 1;
+//    return count;
+//  }
+
+//  function reset() {
+//    count = 0;
+//    return count;
+//  }
+
+//  return {
+//    add: increment,
+//    minus: decrement,
+//    reset: reset
+//  };
+//}
+
+//const operation = Counter();
+//console.log(operation.add());
+//console.log(operation.add());
+//console.log(operation.add());
+//console.log(operation.minus());
+//console.log(operation.reset());
+//console.log(operation.add());
+
+
+console.log("-- example2:closure--");
+
+//function bankAccount() {
+//  let balance = 1000;
+//  function deposit(amount) {
+//    balance += amount;
+//    return balance;
+//  }
+//  function withdraw(amount) {
+
+//    balance -= amount
+//    return {
+//      remainingBalance: balance,
+//      amountWithdraw: amount
+//    };
+//  }
+//  function getBalance() {
+//    return balance;
+//  }
+//  return {
+//    deposit,
+//    withdraw,
+//    getBalance
+//  };
+//}
+//const result = bankAccount();
+//console.log(result.deposit(1000));
+//console.log(result.withdraw(500));
+//console.log(result.getBalance());
+
+console.log("-- Asyncronus callback--");
+
+
+setTimeout(function () {
+  console.log("timer");
+}, 5000);
+function x(y) {
+  console.log("x")
+  y();
+}
+x(function y() {
+  console.log("y")
+
+})
+console.log("-- Asyncronus callback--");
+function attachEventListener() {
   let count = 0;
-  function increment() {
-    count += 1;
-    return count;
-  }
-  function decrement() {
-    count -= 1;
-    return count;
-  }
+  document.getElementById("clickMe").addEventListener("click", function xyz() {
+    console.log("button clicked", ++count);
+  });
+}
+attachEventListener();
 
-  function reset() {
-    count = 0;
-    return count;
-  }
+function setIntervalListener() {
+  const countElement = document.getElementById("countdown");
+  let count = Number(countElement.textContent);
+  let intervalId = null;
+  function Start() {
 
-  return {
-    add: increment,
-    minus: decrement,
-    reset: reset
-  };
+    document.getElementById("start").addEventListener("click", function () {
+      if (intervalId !== null) return;
+      intervalId = setInterval(() => {
+        if (count > 0) {
+          count--
+
+        } else {
+          count = 10
+        }
+        countElement.textContent = count;
+      }, 1000);
+      console.log("Interval ID:", intervalId);
+    });
+
+  }
+  function Stop() {
+    document.getElementById("stop").addEventListener("click", function () {
+      countElement.textContent = count;
+      clearInterval(intervalId);
+      intervalId = null;
+    })
+
+  }
+  function Reset() {
+    document.getElementById("reset").addEventListener("click", function () {
+      count = 0;
+      countElement.textContent = count;
+
+      clearInterval(intervalId);
+      intervalId = null;
+    });
+  }
+  Start();
+  Stop();
+  Reset();
+}
+setIntervalListener();
+
+
+console.log("-- callback example 2--");
+
+function displayUser(user) {
+  console.log(user.name);
 }
 
-const operation = Counter();
-console.log(operation.add());
-console.log(operation.add());
-console.log(operation.add());
-console.log(operation.minus());
-console.log(operation.reset());
-console.log(operation.add());
+function getUser(id, callback) {
+  setTimeout(() => {
+    callback({ id: id, name: "Nandana" });
+  }, 1000);
+}
+
+getUser(1, displayUser);
+
+console.log("-- callback example 2:modified--");
+function getUser(id, callback) {
+  setTimeout(() => {
+    callback({ id: id, name: "Nandana" });
+  }, 1000)
+}
+getUser(1, (user) => {
+  console.log(user.id);
+  console.log(user.name);
+});
